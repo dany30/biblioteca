@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('permiso/{nombre?}', function($name = false){
+    return $name;
+})->where('nombre','[A-Za-z]+');
